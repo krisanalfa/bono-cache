@@ -1,0 +1,16 @@
+{
+    "name": "krisanalfa/bono-cache",
+    "description": "Laravel cache manager for Bono PHP Framework",
+    "require": {
+        "xinix-technology/bono": "~0.1.10",
+        "illuminate/cache": "~4.1.23"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Krisan Alfa Timur",
+            "email": "krisan47@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
