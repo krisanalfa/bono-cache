@@ -26,32 +26,45 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * @author      Krisan Alfa Timur <krisan47@gmail.com>
- * @copyright   2013 PT Sagara Xinix Solusitama
- * @link        http://xinix.co.id/products/bono
- * @license     https://raw.github.com/xinix-technology/bono/master/LICENSE
- * @package     Bono
- *
+ * @category  Cache
+ * @package   Bono
+ * @author    Krisan Alfa Timur <krisan47@gmail.com>
+ * @copyright 2013 PT Sagara Xinix Solusitama
+ * @license   https://raw.github.com/xinix-technology/bono/master/LICENSE MIT
+ * @link      https://github.com/krisanalfa/bono-cache
  */
-
 namespace KrisanAlfa\Cache\Provider;
 
 use \Bono\App;
 
-class CacheProvider extends \Bono\Provider\Provider {
+/**
+ * Inject Cache Class to Bono Container
+ *
+ * @category  Cache
+ * @package   Bono
+ * @author    Krisan Alfa Timur <krisan47@gmail.com>
+ * @copyright 2013 PT Sagara Xinix Solusitama
+ * @license   https://raw.github.com/xinix-technology/bono/master/LICENSE MIT
+ * @link      https://github.com/krisanalfa/bono-cache
+ */
+class CacheProvider extends \Bono\Provider\Provider
+{
     /**
      * Initialize the provider
+     *
+     * @return void
      */
-    public function initialize() {
+    public function initialize()
+    {
         $app = $this->app;
 
-        $app->container->singleton('cache', function($app)
-        {
-            $config       = App::getInstance()->config('cache');
-            $cacheManager = new \KrisanAlfa\Cache\Cache($app);
+        $app->container->singleton(
+            'cache', function ($app) {
+                $config       = App::getInstance()->config('cache');
+                $cacheManager = new \KrisanAlfa\Cache\Cache($app);
 
-            return $cacheManager->driver($config['driver']);
-        });
-
+                return $cacheManager->driver($config['driver']);
+            }
+        );
     }
 }

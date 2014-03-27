@@ -26,30 +26,32 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * @author      Krisan Alfa Timur <krisan47@gmail.com>
- * @copyright   2013 PT Sagara Xinix Solusitama
- * @link        http://xinix.co.id/products/bono
- * @license     https://raw.github.com/xinix-technology/bono/master/LICENSE
- * @package     Bono
- *
+ * @category  Cache
+ * @package   Bono
+ * @author    Krisan Alfa Timur <krisan47@gmail.com>
+ * @copyright 2013 PT Sagara Xinix Solusitama
+ * @license   https://raw.github.com/xinix-technology/bono/master/LICENSE MIT
+ * @link      https://github.com/krisanalfa/bono-cache
  */
-
 namespace KrisanAlfa\Cache;
 
 use \Bono\App;
 use \Illuminate\Cache\CacheManager;
-use \Illuminate\Cache\ApcStore;
-use \Illuminate\Cache\ArrayStore;
 use \Illuminate\Cache\FileStore;
-use \Illuminate\Cache\MemcachedStore;
-use \Illuminate\Cache\WinCacheStore;
-use \Illuminate\Cache\RedisStore;
-use \Illuminate\Cache\DatabaseStore;
 use \Illuminate\Cache\Repository;
-use \Illuminate\Cache\StoreInterface;
 
-class Cache extends CacheManager {
-
+/**
+ * Inject Cache Wrapper
+ *
+ * @category  Cache
+ * @package   Bono
+ * @author    Krisan Alfa Timur <krisan47@gmail.com>
+ * @copyright 2013 PT Sagara Xinix Solusitama
+ * @license   https://raw.github.com/xinix-technology/bono/master/LICENSE MIT
+ * @link      https://github.com/krisanalfa/bono-cache
+ */
+class Cache extends CacheManager
+{
     /**
      * Create an instance of the file cache driver.
      *
@@ -63,4 +65,3 @@ class Cache extends CacheManager {
     }
 
 }
-
