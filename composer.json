@@ -5,6 +5,11 @@
         "xinix-technology/bono": "~0.1.10",
         "illuminate/cache": "~4.1.23"
     },
+    "autoload": {
+        "psr-0": {
+            "KrisanAlfa\\Cache": "src/"
+        }
+    },
     "license": "MIT",
     "authors": [
         {
