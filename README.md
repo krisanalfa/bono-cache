@@ -22,8 +22,8 @@ This option controls the default cache "driver" that will be used when using the
 Of course, you may use other drivers any time you wish.
 
 **Supported Driver:**
-> Now : `file`, `array`, `apc`
-> Later: `norm`, `redis`, `memcached`
+- Now : `file`, `array`, `apc`
+- Later: `norm`, `redis`, `memcached`
 
 
 ####Path
