@@ -58,13 +58,11 @@ class CacheProvider extends \Bono\Provider\Provider
     {
         $app = $this->app;
 
-        $app->container->singleton(
-            'cache', function ($app) {
-                $config       = App::getInstance()->config('cache');
-                $cacheManager = new \KrisanAlfa\Cache\Cache($app);
+        $app->container->singleton('cache', function ($app) {
+            $config       = App::getInstance()->config('cache');
+            $cacheManager = new \KrisanAlfa\Cache\Cache($app);
 
-                return $cacheManager->driver($config['driver']);
-            }
-        );
+            return $cacheManager->driver($config['driver']);
+        });
     }
 }
