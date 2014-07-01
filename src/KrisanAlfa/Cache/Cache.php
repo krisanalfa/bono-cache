@@ -63,5 +63,4 @@ class Cache extends CacheManager
 
         return $this->repository(new FileStore(new \Illuminate\Filesystem\Filesystem(), $config['path']));
     }
-
 }
